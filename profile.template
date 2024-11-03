@@ -1,0 +1,12 @@
+flight_tickets:
+  outputs:
+    dev:
+      dbname: your_dbname
+      host: localhost
+      pass: p@55w0rD
+      port: 5432
+      schema: flights
+      threads: 5
+      type: postgres
+      user: username
+  target: dev
