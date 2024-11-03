@@ -153,7 +153,11 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-.dbt-1.8
+.dbt-1.8/
+logs/
+flight_tickets/seeds
+flight_tickets/logs
+flight_tickets/target
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
