@@ -1,6 +1,10 @@
 # finops initialization 
-- install postgresql 
+- Install postgresql 
 - then create database with user and password 
+- create a database name as finops or related project name 
+- create a schema flights and user as fin_ops_user
+- Please use test and development in local enviroment first 
+- Perfer GNU/Linux or WSL enviroment 
 - create a project directory in /home or %USERPROFILE% 
 - create a virtual environment for the Python 
 - clone project in /home/project or %USERPROFILE%\project directory 
@@ -8,4 +12,3 @@
 - copy the profile.template and paste in .dbt/ in Linux or .dbt\ in windows
 - run dbt init 
 - run the dbt debug for testing database connection and dbt project
-- 
