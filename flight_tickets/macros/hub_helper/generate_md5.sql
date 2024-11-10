@@ -2,10 +2,6 @@
 
 {# This is a macro for generate md5 based checksum value for business key#}
 
-{{
-    return(
-        "md5(upper(trim('' || " ~ columns | join(' || ') ~ ")))"
-    )
-}}
+{{ return( 'md5(upper(' ~ columns | join(' || ') ~ '))' ) }}
 
 {% endmacro %}

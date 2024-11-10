@@ -1,0 +1,28 @@
+models:
+  - name: l_aircraft_seat
+    schema: flight_datavault2
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: lhk_aircraft_seat
+        description: link.
+        data_tests:
+          - not_null
+          - unique
+      - name: hk_aircraft
+        description: aircraft code 
+        data_test:
+          - not_null
+          - unique
+      - name: hk_seat
+        description: aircraft code 
+        data_test:
+          - not_null
+          - unique
+      - name: load_time_ts
+        description: load_time_ts
+        data_test:
+          - not_null
+      - name: load_data_src
+        description: aircraft code 
+        data_test:
+          - not_null

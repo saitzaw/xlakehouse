@@ -8,6 +8,10 @@ Try running the following commands:
 - dbt run
 - dbt test
 
+### adding dependencies 
+- add dependencies in project 
+- create a package.yml as a same level of dbt_project.yml
+
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
