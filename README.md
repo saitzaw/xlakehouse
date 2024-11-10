@@ -46,6 +46,7 @@
 
 # Json format (postgresql)
 table_name: my_address
+
 |#| address::jsonb | 
 |:-:|:------:|:---:|
 |1| {street: '117 Shan Lan', township: 'Tamwe' } |
