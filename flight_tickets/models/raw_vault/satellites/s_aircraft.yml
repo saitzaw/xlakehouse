@@ -1,0 +1,26 @@
+models:
+  - name: s_aircraft
+    schema: flight_datavault2
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: hk_aircraft
+        description: The unique key for each customer.
+        tests:
+          - not_null
+          - unique
+      - name: model
+        description: Aircraft model
+        tests:
+          - not_null
+      - name: range
+        description: Aircraft range
+        tests:
+          - not_null
+      - name: load_time_ts
+        description: Load timestamp
+        tests:
+          - not_null
+      - name: load_data_src
+        description: Source of the data
+        tests:
+          - not_null

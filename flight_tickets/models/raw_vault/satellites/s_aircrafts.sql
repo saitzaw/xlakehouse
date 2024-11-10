@@ -1,19 +1,19 @@
 {{
     config(
         materialized = 'incremental'
-        , schema = 'flights'
-        , unique_key = 'aircraft_code'
+        , schema = 'datavault2'
     )
 }}
 
 with cte_s_aircrafts as 
 (
     select 
-        generate_md5(aircraft_code) as hk_aircraft
- 	    ,generate_current_time() 
-        ,generate_source_table()
- 	    ,model ->> 'en' as model
- 	    ,range
+        md5(upper(trim(aircraft_code))) as hk_aircraft
+        , model ->> 'en' as model
+ 	    , range
+ 	    , {{ generate_current_time() }} 
+        , {{ generate_source_table() }}
+ 	    
     from 
         {{ source('flights', 'aircrafts') }}
 )
