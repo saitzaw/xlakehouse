@@ -1,0 +1,34 @@
+version: 2
+
+sources: 
+  - name: flights
+    schema: flights
+    description: making a hub tables, link and satellite table from sources
+    tables:
+      - name: aircrafts
+        identifier: aircrafts
+        description: aircrafts
+      - name: airports
+        identifier: airports
+        description: airports table
+      - name: boarding_passes
+        identifier: boarding_passes
+        description: boarding_passes table 
+      - name: bookings
+        identifier: bookings
+        description: bookings table 
+      - name: flights
+        identifier: flights
+        description: flights table
+      - name: seats
+        identifier: seats
+        description: seats table
+      - name: tickets_flight
+        identifier: tickets_flight
+        description: tickets_flight table 
+      - name: tickets
+        identifier: tickets
+        description: tickets table 
+      
+
+
