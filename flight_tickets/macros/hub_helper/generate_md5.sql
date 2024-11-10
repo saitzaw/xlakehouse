@@ -4,12 +4,8 @@
 
 {{
     return(
-        md5(
-            upper(
-                trim(''.join(columns))
-                )
-            )
-        )
+        "md5(upper(trim('' || " ~ columns | join(' || ') ~ ")))"
+    )
 }}
 
 {% endmacro %}
