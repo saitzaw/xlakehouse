@@ -12,3 +12,8 @@
 - copy the profile.template and paste in .dbt/ in Linux or .dbt\ in windows
 - run dbt init 
 - run the dbt debug for testing database connection and dbt project
+
+# Json format (postgresql)
+|#| address::jsonb | 
+|1| {street: '117 Shan Lan', township: 'Tamwe' } |
+|2| {street: '160', township: 'Tamwe', city: 'Yangon'} |
