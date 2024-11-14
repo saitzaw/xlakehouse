@@ -1,0 +1,17 @@
+models:
+  - name: stg_bookings
+    schema: flights_staging
+    description: raw flight data to test
+    columns:
+      - name: book_ref
+        description: code name for the airport
+        data_tests:
+          - not_null
+      - name: book_date
+        description: airport name in english and russia
+        data_tests:
+          - not_null
+      - name: total_amount
+        description: city name in english and russia
+        data_tests:
+          - not_null

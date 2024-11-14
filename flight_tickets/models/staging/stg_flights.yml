@@ -1,0 +1,47 @@
+models:
+  - name: stg_flights
+    schema: flights_staging
+    description: raw to staging flights data
+    columns:
+      - name: flight_id
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: flight_no
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: scheduled_departure
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: scheduled_arrival
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: departure_airport
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: arrival_airport
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: status
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: aircraft_code
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: actual_departure
+        description: id for the flight 
+        data_tests:
+          - not_null
+      - name: actual_arrival
+        description: id for the flight 
+        data_tests:
+          - not_null
+      
+      

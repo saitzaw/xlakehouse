@@ -1,0 +1,22 @@
+models:
+
+  - name: stg_ticket_flights
+    schema: flights_staging
+    description: raw ticket flights 
+    columns:
+      - name: ticket_no
+        description: ticket number 
+        data_tests:
+          - not_null
+      - name: flight_id
+        description: flight_id 
+        data_tests:
+          - not_null
+      - name: fare_conditions
+        description: fare condtions 
+        data_tests:
+          - not_null 
+      - name: amount
+        description: fare amount 
+        data_tests:
+          - not_null

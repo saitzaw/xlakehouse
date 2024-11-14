@@ -17,7 +17,8 @@ with cte_l_aircraft_seat as (
         , {{ generate_current_time() }} 
         , {{ generate_source_table() }}
     from 
-        {{ source('flights', 'seats') }}
+       -- {{ source('flights', 'seats') }}
+       {{ ref('stg_seats') }}
 )
 
 select * from cte_l_aircraft_seat

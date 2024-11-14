@@ -1,0 +1,21 @@
+modles:
+  - name: stg_boarding_passes
+    schema: flights_staging
+    description: raw flight data to test
+    columns:
+      - name: ticket_no
+        description: ticket number 
+        data_tests:
+          - not_null
+      - name: flight_id
+        description: flight id
+        data_tests:
+          - not_null
+      - name: boarding_no
+        description: boarding pass number
+        data_tests:
+          - not_null
+      - name: seat_no
+        description: seat number
+        data_tests:
+          - not_null

@@ -1,0 +1,17 @@
+models:
+  - name: stg_seats
+    schema: flights_staging
+    description: raw flight data to test
+    columns:
+      - name: aircraft_code
+        description: aircraft code 
+        data_tests:
+          - not_null
+      - name: seat_no
+        description: seat code for the aircraft
+        data_tests:
+          - not_null
+      - name: fare_conditions
+        description: fare condition 
+        data_tests:
+          - not_null

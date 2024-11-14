@@ -1,0 +1,25 @@
+models:
+  - name: stg_tickets
+    schema: flights_staging
+    description: raw ticket flights 
+    columns:
+      - name: ticket_no
+        description: ticket number 
+        data_tests:
+          - not_null
+      - name: book_ref
+        description: booking reference number 
+        data_tests:
+          - not_null
+      - name: passenger_id
+        description: passender id
+        data_tests:
+          - not_null
+      - name: passenger_name
+        description: passenger name 
+        data_tests:
+          - not_null
+      - name: contact_data
+        description: contact data for passenger 
+        data_tests:
+          - not_null
