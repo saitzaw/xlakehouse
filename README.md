@@ -57,7 +57,27 @@ select address->>'street' as street from my_address
 ```
 
 # change data type in postgresql [if necessary]
+```
 ALTER TABLE database.flights.aircrafts
 ALTER COLUMN model
 SET DATA TYPE json
 USING model::json;
+```
+
+# permission issue 
+### check permission 
+```
+SELECT 
+  grantee, 
+  privilege_type 
+FROM 
+  information_schema.role_table_grants 
+WHERE 
+   table_name = 'boarding_passes' AND 
+   table_schema = 'flights';
+```
+
+### if missing a read permission, run the following query
+ GRANT SELECT ON flights.boarding_passes TO dbt_user;
+ GRANT SELECT ON flights.tickets TO dbt_user;
+ GRANT SELECT ON flights.tickets TO dbt_user;
