@@ -1,0 +1,17 @@
+models:
+  - name: stg_aircratfs
+    schema: flights_staging
+    description: raw  aircraft data to staging database
+    columns:
+      - name: aircraft_code
+        description: code name for the aircraft
+        data_tests:
+          - not_null
+      - name: model
+        description: code name for the model in json
+        data_tests:
+          - not_null
+      - name: range
+        description: for the range
+        data_tests:
+          - not_null

@@ -1,0 +1,26 @@
+models:
+  - name: stg_airports
+    schema: flights_staging
+    description: raw flight data to test
+    columns:
+      - name: airport_code
+        description: code name for the airport
+        data_tests:
+          - not_null
+      - name: airport_name
+        description: airport name in english and russia
+        data_tests:
+          - not_null
+      - name: city
+        description: city name in english and russia
+        data_tests:
+          - not_null
+      - name: coordinates
+        description: coordinates of the system in point (pg)
+        data_tests:
+          - not_null
+      - name: timezone
+        description: timezone of the system in point (pg)
+        data_tests:
+          - not_null
+
