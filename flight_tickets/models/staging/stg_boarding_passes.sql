@@ -7,7 +7,7 @@
 
 with cte_stg_boarding_passes as (
     select 
-        ticket_no
+        cast(ticket_no as text) as ticket_no
         , flight_id
         , boarding_no
         , seat_no

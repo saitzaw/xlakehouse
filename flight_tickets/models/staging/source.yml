@@ -23,8 +23,8 @@ sources:
       - name: seats
         identifier: seats
         description: seats table
-      - name: tickets_flight
-        identifier: tickets_flight
+      - name: ticket_flights
+        identifier: ticket_flights
         description: tickets_flight table 
       - name: tickets
         identifier: tickets
