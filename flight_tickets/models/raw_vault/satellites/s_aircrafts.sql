@@ -15,7 +15,8 @@ with cte_s_aircrafts as
         , {{ generate_source_table() }}
  	    
     from 
-        {{ source('flights', 'aircrafts') }}
+        -- {{ source('flights', 'aircrafts') }}
+        {{ ref('stg_aircrafts') }}
 )
 
 select * from cte_s_aircrafts

@@ -14,7 +14,8 @@ with cte_h_flight as (
 	    , {{ generate_current_time() }}
         , {{ generate_source_table() }}
     from 
-        {{ source('flights', 'aircrafts') }}
+        -- {{ source('flights', 'aircrafts') }}
+        {{ ref('stg_aircrafts')}}
 )
 
 select * from cte_h_flight
