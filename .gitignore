@@ -153,7 +153,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-.dbt-1.8/
+.dbt-1.8.8/
 logs/
 flight_tickets/seeds
 flight_tickets/logs
