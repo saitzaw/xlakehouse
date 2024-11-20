@@ -12,9 +12,8 @@ PROJECT_STG_PATH = '$HOME/projects/finops/dags/includes'
 
 # dag arguments 
 default_args = {
-    'ownwer': 'sthz',
-    'depends_on_past': 'False',
-    'start_date': datetime(2024, 11, 16),
+    'owner': 'sthz',
+    'start_date': datetime(2024, 11, 20),
     'retries': 1,
     'retry_delay': timedelta(minutes=5)
 }
