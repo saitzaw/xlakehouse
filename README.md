@@ -81,3 +81,41 @@ WHERE
  GRANT SELECT ON flights.boarding_passes TO dbt_user;
  GRANT SELECT ON flights.tickets TO dbt_user;
  GRANT SELECT ON flights.tickets TO dbt_user;
+
+
+### Scheduler and Data ochestration 
+## create a postgresql user for airflow
+- sudo -u postgres psql
+- CREATE DATABASE airflow;
+- CREATE USER airflow_user WITH ENCRYPTED PASSWORD 'airflow123';
+- GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow_user;
+
+## Change airflow configuration
+- change the airflow database connector in airflow.cfg
+- sql_alchemy_conn = postgresql+psycopg2://airflow_user:airflow123@localhost:5432/airflow
+
+# First time Run
+## init the project
+- airflow db init
+- airflow users list
+
+## create user
+airflow users create \
+    --username airflowAdmin \
+    --firstname Airflow \
+    --lastname Admin \
+    --role Admin \
+    --email airflow.admin@gmail.com
+
+### create password 
+create-password -> airflow123
+
+## RUN AIRFLOW SERVER
+airflow webserver --port 8090 -D
+airflow scheduler -D
+
+## Airflow
+- run in default path /home/user/airflow
+- create a soft link in dev environment for dags
+- ln -s $HOME/projects/finops/dags $HOME/airflow/
+
