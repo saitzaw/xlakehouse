@@ -82,7 +82,14 @@ WHERE
  GRANT SELECT ON flights.tickets TO dbt_user;
  GRANT SELECT ON flights.tickets TO dbt_user;
 
-
+### REMARK 
+- AIRFLOW and DBT environment are not in the same virtual environment
+- USE BASHOPERATOR TO run the DBT script 
+### Airflow configuration 
+- Create a new virtual environmet for the airflow 
+- python -m venv .airflow-env
+- source .ariflow-env/bin/activate 
+- pip install apache-airflow psycopg2-binary
 ### Scheduler and Data ochestration 
 ## create a postgresql user for airflow
 - sudo -u postgres psql
