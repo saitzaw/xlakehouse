@@ -20,7 +20,7 @@ default_args = {
 
 # DAG 
 with DAG(
-    'flight_tickets_staging_data_upload',
+    'flight_tickets',
     default_args = default_args,
     schedule_interval=timedelta(days=1)
 ) as dag:
