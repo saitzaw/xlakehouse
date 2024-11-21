@@ -1,4 +1,7 @@
-Welcome to your new dbt project!
+### Data warehouse solution for the part of lakehouse 
+- Read Ingest data from various source
+- Convert to delta table 
+- For DBT, insert data into postgresql
 
 ### Using the dbt starter project
 
