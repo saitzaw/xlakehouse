@@ -4,7 +4,7 @@ from airflow.operators.bash_operator import BashOperator
 from datetime import datetime, timedelta
 
 # Seed path 
-PROJECT_SEED_PATH = '$HOME/projects/finops/dags/includes'
+PROJECT_SEED_PATH = '$HOME/projects/xlakehouse/dags/includes'
 
 # default dag arguments 
 default_args = {

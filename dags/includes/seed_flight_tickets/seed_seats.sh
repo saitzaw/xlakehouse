@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-MY_PATH=$HOME/projects/finops
+MY_PATH=$HOME/projects/xlakehouse
 MY_SRC_FOLDER=$MY_PATH/flight_tickets
 
 # check the project is located in 

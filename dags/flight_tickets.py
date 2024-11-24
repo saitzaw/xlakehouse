@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 # default project parth 
 # in production it should read from environment variable 
 # create a project folder for dags to run
-PROJECT_STG_PATH = '$HOME/projects/finops/dags/includes'
+PROJECT_STG_PATH = '$HOME/projects/xlakehouse/dags/includes'
 
 # dag arguments 
 default_args = {
