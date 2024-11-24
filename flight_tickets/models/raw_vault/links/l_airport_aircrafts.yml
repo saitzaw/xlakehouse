@@ -1,0 +1,37 @@
+models:
+  - name: l_airport_aircrafts
+    schema: flight_datavault2
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: lhk_flight_airport_aircraft
+        description: link.
+        data_tests:
+          - not_null
+          - unique
+      - name: hk_departure_airport
+        description: hk_departure_airport
+        data_test:
+          - not_null
+          - unique
+      - name: hk_arrival_airport
+        description: hk_arrival_airport 
+        data_test:
+          - not_null
+          - unique
+      - name: hk_aircraft
+        description: aircraft code 
+        data_test:
+          - not_null
+          - unique
+      - name: flight_id
+        description: flight_id
+        data_test:
+          - not_null
+      - name: load_time_ts
+        description: load_time_ts
+        data_test:
+          - not_null
+      - name: load_data_src
+        description: load data table name
+        data_test:
+          - not_null

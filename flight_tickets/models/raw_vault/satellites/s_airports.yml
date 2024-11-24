@@ -1,0 +1,34 @@
+models:
+  - name: s_airports
+    schema: flight_datavault2
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: hk_airport
+        description: The unique key for each customer.
+        tests:
+          - not_null
+          - unique
+      - name: airport_name
+        description: airport name
+        tests:
+          - not_null
+      - name: city
+        description: city name in english
+        tests:
+          - not_null
+      - name: coordinates
+        description: coordinates in points [pg ONLY]
+        tests:
+          - not_null
+      - name: timezone
+        description: timezone in UTC 
+        tests:
+          - not_null
+      - name: load_time_ts
+        description: Load timestamp
+        tests:
+          - not_null
+      - name: load_data_src
+        description: Source of the data
+        tests:
+          - not_null

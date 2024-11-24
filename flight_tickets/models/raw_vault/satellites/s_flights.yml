@@ -1,0 +1,42 @@
+models:
+  - name: s_flights
+    schema: flight_datavault2
+    description: Customer data with basic cleaning and transformation applied, one row per customer.
+    columns:
+      - name: lhk_flight_airport_aircraft
+        description: The unique key for each customer.
+        tests:
+          - not_null
+          - unique
+      - name: flight_no
+        description: airport name
+        tests:
+          - not_null
+      - name: scheduled_departure
+        description: city name in english
+        tests:
+          - not_null
+      - name: scheduled_arrival
+        description: coordinates in points [pg ONLY]
+        tests:
+          - not_null
+      - name: actual_departure
+        description: timezone in UTC 
+        tests:
+          - not_null
+      - name: actual_arrival
+        description: timezone in UTC 
+        tests:
+          - not_null
+      - name: status
+        description: timezone in UTC 
+        tests:
+          - not_null
+      - name: load_time_ts
+        description: Load timestamp
+        tests:
+          - not_null
+      - name: load_data_src
+        description: Source of the data
+        tests:
+          - not_null

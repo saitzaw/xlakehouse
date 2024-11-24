@@ -9,7 +9,7 @@ if [ -d $MY_PATH ]; then
     source .dbt-1.8.8/bin/activate 
     if [ $VIRTUAL_ENV != "" ]; then
          cd $MY_SRC_FOLDER
-         dbt run --select models/raw_vault/satellites/s_aircrafts.sql
+         dbt run --select models/raw_vault/satellites/s_airports.sql
          deactivate
     else 
         echo "VIRTUAL ENVRIONMENT CANNOT BE ACTIVATED: check in $MY_PATH" 
