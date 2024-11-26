@@ -1,8 +1,14 @@
 ### Combination of data lake and data warehouse 
+
+- Java version JDK 17 for unity 
+- for lakehouse 
 - Apache Spark 
 - Unity Catalog 
 - Delta Table
 - One Bigtable 
+
+
+
 
 ### Ingest data 
 - Ingest data from csv and other file format 
