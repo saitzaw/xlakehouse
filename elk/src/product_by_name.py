@@ -1,9 +1,9 @@
 import json
 
-from control import es_cllient
-from elk.src.macro import pagination
-from elk.src.macro import search_product_by_name
-client = es_cllient.adaptor()
+from control import es_client
+from macro import pagination
+from macro import search_product_by_name
+client = es_client.adaptor()
 
 query_body = pagination.pages(1,10)
 
