@@ -48,10 +48,9 @@
 table_name: my_address
 
 |#| address::jsonb | 
-|:-:|:------:|:---:|
+|:-:|:---:|
 |1| {street: '117 Shan Lan', township: 'Tamwe' } |
 |2| {street: '160', township: 'Tamwe', city: 'Yangon'} |
-
 ```
 select address->>'street' as street from my_address
 ```
